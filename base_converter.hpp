@@ -15,18 +15,9 @@ namespace n {
         }
 
         // Make sure the base range from 2 to 36
-        if (baseFrom < 2) {
-            baseFrom = 2;
-        }
-        else if (baseFrom > 36) {
-            baseFrom = 36;
-        }
-
-        if (baseTo < 2) {
-            baseTo = 2;
-        }
-        else if (baseTo > 36) {
-            baseTo = 36;
+        if (baseFrom < 2 or baseTo < 2 or baseFrom > 36 or baseTo > 36) {
+            std::cerr << "Error: Base need to range from 2 to 36." << std::endl;
+            return "-1";
         }
 
         // Convert input to base 10
