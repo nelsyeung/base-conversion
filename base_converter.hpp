@@ -1,4 +1,7 @@
-#include "base_converter.h"
+#ifndef BASE_CONVERTER_BASE_CONVERTER_H
+#define BASE_CONVERTER_BASE_CONVERTER_H
+
+#include <string>
 
 std::string convert_base(const std::string &inputStr, int baseFrom, int baseTo) {
     // No conversion is needed for the same base
@@ -46,3 +49,5 @@ std::string convert_base(const std::string &inputStr, int baseFrom, int baseTo) 
 
     return output;
 }
+
+#endif
