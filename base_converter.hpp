@@ -1,6 +1,7 @@
 #ifndef BASE_CONVERTER_BASE_CONVERTER_HPP
 #define BASE_CONVERTER_BASE_CONVERTER_HPP
 
+#include <iostream>
 #include <string>
 
 namespace n {
