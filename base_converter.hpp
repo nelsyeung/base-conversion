@@ -1,9 +1,13 @@
-#ifndef BASE_CONVERTER_BASE_CONVERTER_H
-#define BASE_CONVERTER_BASE_CONVERTER_H
+#ifndef BASE_CONVERTER_BASE_CONVERTER_HPP
+#define BASE_CONVERTER_BASE_CONVERTER_HPP
 
 #include <string>
 
 std::string convert_base(const std::string &inputStr, int baseFrom, int baseTo) {
+    const std::string alphanum = "0123456789ABCDEFGHIJKLMOPQRSTUVWXYZ";
+    unsigned long inputNum = 0;
+    std::string output = "";
+
     // No conversion is needed for the same base
     if (baseFrom == baseTo) {
         return inputStr;
@@ -24,15 +28,9 @@ std::string convert_base(const std::string &inputStr, int baseFrom, int baseTo) 
         baseTo = 36;
     }
 
-    const std::string alphanum = "0123456789ABCDEFGHIJKLMOPQRSTUVWXYZ";
-    unsigned long inputNum = 0;
-    std::string output = "";
-
     // Convert input to base 10
-    if (baseFrom != 10) {
-        for (std::string::size_type pos = 0; pos < inputStr.length(); ++pos) {
-            inputNum = inputNum * baseFrom + alphanum.find(inputStr[pos]);
-        }
+    for (std::string::size_type pos = 0; pos < inputStr.length(); ++pos) {
+        inputNum = inputNum * baseFrom + alphanum.find(inputStr[pos]);
     }
 
     // No conversion is needed when input is 0
