@@ -1,5 +1,6 @@
 # Base Conversion
 C++ function to convert numbers from one base representation to another, ranging from 2 to 36.
+Requires C++11
 
 # Usage
 ```cpp
