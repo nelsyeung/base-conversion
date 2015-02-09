@@ -1,4 +1,3 @@
-#include <iostream>
 #include "base_conversion.hpp"
 
 int main()
